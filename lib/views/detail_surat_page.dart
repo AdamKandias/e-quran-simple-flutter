@@ -1,13 +1,14 @@
-import 'package:e_quran_simple_flutter/models/DetailSurat.dart';
-import 'package:e_quran_simple_flutter/providers/DaftarSuratProvider.dart';
-import 'package:e_quran_simple_flutter/views/Homepage.dart';
+import '../models/detail_surat.dart';
+import 'homepage.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
+
+import '../providers/daftar_surat_provider.dart';
 
 class DetailSuratPage extends StatelessWidget {
   final int nomor;
 
-  const DetailSuratPage({required this.nomor, Key? key}) : super(key: key);
+  const DetailSuratPage({required this.nomor, super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -139,7 +140,12 @@ class DetailSuratPage extends StatelessWidget {
                                     ),
                                   );
                                 },
-                          child: const Text("Surat Sebelumnya"),
+                          child: const Text(
+                            "Surat Sebelumnya",
+                            style: TextStyle(
+                              color: Colors.white,
+                            ),
+                          ),
                         ),
                         ElevatedButton(
                           style: ElevatedButton.styleFrom(
@@ -161,7 +167,12 @@ class DetailSuratPage extends StatelessWidget {
                                     ),
                                   );
                                 },
-                          child: const Text("Surat Selanjutnya"),
+                          child: const Text(
+                            "Surat Selanjutnya",
+                            style: TextStyle(
+                              color: Colors.white,
+                            ),
+                          ),
                         ),
                       ],
                     ),

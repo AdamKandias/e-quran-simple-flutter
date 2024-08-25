@@ -1,4 +1,7 @@
-class SuratSebelumnya {
+// ignore_for_file: public_member_api_docs, sort_constructors_first
+import 'package:equatable/equatable.dart';
+
+class SuratSebelumnya extends Equatable {
   final int id;
   final int nomor;
   final String nama;
@@ -9,7 +12,7 @@ class SuratSebelumnya {
   final String deskripsi;
   final String audio;
 
-  SuratSebelumnya({
+  const SuratSebelumnya({
     required this.id,
     required this.nomor,
     required this.nama,
@@ -33,5 +36,20 @@ class SuratSebelumnya {
       deskripsi: map['deskripsi'],
       audio: map['audio'],
     );
+  }
+
+  @override
+  List<Object> get props {
+    return [
+      id,
+      nomor,
+      nama,
+      namaLatin,
+      jumlahAyat,
+      tempatTurun,
+      arti,
+      deskripsi,
+      audio,
+    ];
   }
 }

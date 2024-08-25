@@ -1,4 +1,4 @@
-package com.example.e_quran_simple_flutter
+package com.gurita_langit.simple_quran
 
 import io.flutter.embedding.android.FlutterActivity
 

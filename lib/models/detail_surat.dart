@@ -1,6 +1,9 @@
-import 'package:e_quran_simple_flutter/models/Ayat.dart';
+// ignore_for_file: public_member_api_docs, sort_constructors_first
+import 'package:equatable/equatable.dart';
 
-class DetailSurat {
+import 'package:e_quran_simple_flutter/models/ayat.dart';
+
+class DetailSurat extends Equatable {
   final int nomor;
   final String nama;
   final String namaLatin;
@@ -14,7 +17,7 @@ class DetailSurat {
   final dynamic suratSelanjutnya;
   final dynamic suratSebelumnya;
 
-  DetailSurat({
+  const DetailSurat({
     required this.nomor,
     required this.nama,
     required this.namaLatin,
@@ -44,5 +47,23 @@ class DetailSurat {
       suratSelanjutnya: map['surat_selanjutnya'],
       suratSebelumnya: map['surat_sebelumnya'],
     );
+  }
+
+  @override
+  List<Object> get props {
+    return [
+      nomor,
+      nama,
+      namaLatin,
+      jumlahAyat,
+      tempatTurun,
+      arti,
+      deskripsi,
+      audio,
+      status,
+      ayat,
+      suratSelanjutnya,
+      suratSebelumnya,
+    ];
   }
 }

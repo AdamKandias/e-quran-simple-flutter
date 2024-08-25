@@ -1,4 +1,6 @@
-class Ayat {
+import 'package:equatable/equatable.dart';
+
+class Ayat extends Equatable {
   final int id;
   final int surah;
   final int nomor;
@@ -6,7 +8,7 @@ class Ayat {
   final String transliteration;
   final String translation;
 
-  Ayat({
+  const Ayat({
     required this.id,
     required this.surah,
     required this.nomor,
@@ -25,4 +27,8 @@ class Ayat {
       translation: map['idn'],
     );
   }
+
+  @override
+  List<Object?> get props =>
+      [id, surah, nomor, arabic, transliteration, translation];
 }

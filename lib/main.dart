@@ -1,7 +1,8 @@
-import 'package:e_quran_simple_flutter/providers/DaftarSuratProvider.dart';
-import 'package:e_quran_simple_flutter/views/Homepage.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
+
+import 'providers/daftar_surat_provider.dart';
+import 'views/homepage.dart';
 
 void main() {
   runApp(const MyApp());

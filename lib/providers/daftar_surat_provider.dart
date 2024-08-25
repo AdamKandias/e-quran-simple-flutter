@@ -1,7 +1,8 @@
 import 'package:dio/dio.dart';
-import 'package:e_quran_simple_flutter/models/DaftarSurat.dart';
-import 'package:e_quran_simple_flutter/models/DetailSurat.dart';
+import '../models/detail_surat.dart';
 import 'package:flutter/material.dart';
+
+import '../models/daftar_surat.dart';
 
 class DaftarSuratProvider extends ChangeNotifier {
   final Dio _dio = Dio();
@@ -17,7 +18,7 @@ class DaftarSuratProvider extends ChangeNotifier {
             .toList();
         return daftarSuratList;
       }
-    } on DioError catch (e) {
+    } on DioException catch (e) {
       throw Exception("Error on get Daftar Surat: ${e.message}");
     }
     return null;
@@ -31,7 +32,7 @@ class DaftarSuratProvider extends ChangeNotifier {
         final data = response.data as Map<String, dynamic>;
         return DetailSurat.fromMap(data);
       }
-    } on DioError catch (e) {
+    } on DioException catch (e) {
       throw Exception("Error on get Detail Surat: ${e.message}");
     }
     return null;

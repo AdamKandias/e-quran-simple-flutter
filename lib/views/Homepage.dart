@@ -1,8 +1,9 @@
-import 'package:e_quran_simple_flutter/models/DaftarSurat.dart';
-import 'package:e_quran_simple_flutter/providers/DaftarSuratProvider.dart';
-import 'package:e_quran_simple_flutter/views/DetailSuratPage.dart';
+import 'detail_surat_page.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
+
+import '../models/daftar_surat.dart';
+import '../providers/daftar_surat_provider.dart';
 
 class Homepage extends StatelessWidget {
   const Homepage({super.key});
